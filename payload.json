@@ -1,0 +1,13 @@
+{
+  "id": "6fff8732-9e18-4692-aa97-a4667fac7d31",
+  "number": 17,
+  "haveYouSaidHello": true,
+  "waysToSayHello": [
+    "Guttendag",
+    "Ola"
+  ],
+  "helloID": {
+    "language": "German",
+    "id": "6fff8732-9e18-4692-aa97-a4667fac7d31"
+  }
+}

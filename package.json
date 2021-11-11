@@ -1,0 +1,21 @@
+{
+  "name": "testingeventingtutorial",
+  "version": "1.0.0",
+  "description": "This is the test for the events tutorial to make sure that it still works.",
+  "main": "index.js",
+  "scripts": {
+    "test": "Testing 1,2,3\u001b[D \u001b[D\u001b[D\u001b[D \u001b[2 2, 3"
+  },
+  "keywords": [
+    "Test",
+    "Event",
+    "Tutorial"
+  ],
+  "author": "Nathaniel Sandberg",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
