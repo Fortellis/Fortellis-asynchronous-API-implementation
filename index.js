@@ -9,6 +9,9 @@ const request = require('request');
 const axios = require('axios');
 
 const bodyParser = require('body-parser');
+
+const { v4: uuidv4 } = require('uuid');
+
 app.use(bodyParser.json({extended:true}), express.json());
 
 let token;
@@ -42,6 +45,7 @@ fs.watchFile('./payload.json', async function(event, filename){
             const arrayOfObjects = JSON.parse(data);
             console.log(arrayOfObjects);
             const sendUpdatedData = () => {
+                let requestId = uuidv4();
                 const serverOptions = {
                     uri: 'https://event-relay.fortellis.io/v2/events',
                     body: JSON.stringify(arrayOfObjects),
@@ -49,7 +53,9 @@ fs.watchFile('./payload.json', async function(event, filename){
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept':'application/json',
-                        'Authorization': 'Bearer ' + token
+                        'Authorization': 'Bearer ' + token,
+                        'Data-Owner-Id': 'b74c3f9a-17ee-4943-81f2-ae22bb4f260d',
+                        'X-Request-Id': requestId
                     }
                 };
                 request(serverOptions, function (error, response){
