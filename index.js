@@ -55,7 +55,7 @@ fs.watchFile('./payload.json', async function(event, filename){
                         'Accept':'application/json',
                         'Authorization': 'Bearer ' + token,
                         'partitionKey': '{aUniqueUUIDForYourPartition}',
-                        'Data-Owner-Id': '{yourOrganizationId}',
+                        'Data-Owner-Id': '{subscribingOrganizationId}',
                         'X-Request-Id': requestId
                     }
                 };
