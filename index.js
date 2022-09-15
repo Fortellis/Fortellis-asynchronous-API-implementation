@@ -47,7 +47,7 @@ fs.watchFile('./payload.json', async function(event, filename){
             const sendUpdatedData = () => {
                 let requestId = uuidv4();
                 const serverOptions = {
-                    uri: 'https://event-relay.fortellis.io/v2/events',
+                    uri: 'https://event-relay.fortellis.io/v2/events/{yourChannel}',
                     body: JSON.stringify(arrayOfObjects),
                     method: 'POST',
                     headers: {
